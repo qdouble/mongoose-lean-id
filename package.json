@@ -1,7 +1,7 @@
 {
-  "name": "mongoose-lean-id",
+  "name": "mongoose-lean-id-safe",
   "version": "0.1.0",
-  "description": "Attach `id` to the results of mongoose queries when using `.lean()`",
+  "description": "Attach `id` to the results of mongoose queries when using `.lean()` (This fork prevents crash when _id is missing)",
   "main": "index.js",
   "scripts": {
     "docs": "node ./docs",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vkarpov15/mongoose-lean-id.git"
+    "url": "https://github.com/qdouble/mongoose-lean-id.git"
   },
   "keywords": [
     "mongoose",
@@ -33,7 +33,7 @@
   "author": "Valeri Karpov <val@karpov.io>",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/vkarpov15/mongoose-lean-id/issues"
+    "url": "https://github.com/qdouble/mongoose-lean-id/issues"
   },
-  "homepage": "https://github.com/vkarpov15/mongoose-lean-id"
+  "homepage": "https://github.com/qdouble/mongoose-lean-id"
 }

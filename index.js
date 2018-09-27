@@ -13,9 +13,13 @@ function attachId(res) {
 
   if (this._mongooseOptions.lean) {
     if (Array.isArray(res)) {
-      res.forEach(function(v) { v.id = v._id.toString() });
+      res.forEach(function(v) { if (v._id) {
+        v.id = v._id.toString()
+      } });
     } else {
-      res.id = res._id.toString();
+      if (res._id) {
+        res.id = res._id.toString();
+      }
     }
   }
 }
