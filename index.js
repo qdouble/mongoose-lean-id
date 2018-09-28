@@ -8,18 +8,18 @@ module.exports = function mongooseLeanId(schema) {
 
 function attachId(res) {
   if (res == null) {
-    return
+    return;
   }
 
   if (this._mongooseOptions.lean) {
     if (Array.isArray(res)) {
-      res.forEach(function(v) { if (v._id) {
-        v.id = v._id.toString()
-      } });
-    } else {
-      if (res._id) {
-        res.id = res._id.toString();
+      for (var i = 0, len = res.length; i < len; i++) {
+        if (res[i]._id) {
+          res[i].id = res[i]._id.toString();
+        }
       }
+    } else if (res._id) {
+      res.id = res._id.toString();
     }
   }
 }

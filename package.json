@@ -1,7 +1,7 @@
 {
   "name": "mongoose-lean-id-safe",
-  "version": "0.1.0",
-  "description": "Attach `id` to the results of mongoose queries when using `.lean()` (This fork prevents crash when _id is missing)",
+  "version": "0.2.0",
+  "description": "Attach `id` to the results of mongoose queries when using `.lean()` (This fork prevents crash when _id is missing. Also using for loop for optimization.)",
   "main": "index.js",
   "scripts": {
     "docs": "node ./docs",
